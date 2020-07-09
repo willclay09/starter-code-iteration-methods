@@ -23,20 +23,20 @@ function printKata (kataNumber, object) {
     const stringifiedObject = JSON.stringify(object)
     detailsElement.append(stringifiedObject)
 
-    for(let i = 0; i < object.length; i++){
-        let currentUser = object[i]
-        console.log(currentUser)
-        let userDiv = document.createElement('div')
-        userDiv.className = "user"
+    //for(let i = 0; i < object.length; i++){
+       // let currentUser = object[i]
+       // console.log(currentUser)
+       // let userDiv = document.createElement('div')
+        //userDiv.className = "user"
         
-        for(key in currentUser){
-            let propertyDiv = document.createElement('div')
-            propertyDiv.className = "property"
-            propertyDiv.append(key + ": " + currentUser[key])
-            userDiv.append(propertyDiv)
-        }
-        detailsElement.append(userDiv)
-    }
+        //for(key in currentUser){
+            //let propertyDiv = document.createElement('div')
+           // propertyDiv.className = "property"
+            //propertyDiv.append(key + ": " + currentUser[key])
+           // userDiv.append(propertyDiv)
+        //}
+       // detailsElement.append(userDiv)
+   // }
 }
 
 
@@ -65,8 +65,8 @@ const age1 = users.find(user => user.age > 38)
 printKata(4, age1)
 
 const age2 = users
-    .filter(user => user.isAtive === true)
-    .find(user => user.age > 38)
+    .filter(user => user.age > 38)
+    .find(user => user.isActive === true)
 
 printKata(5, age2)
 
